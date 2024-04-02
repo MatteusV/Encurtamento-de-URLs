@@ -1,3 +1,4 @@
 import postgres from "postgres"
+import { env } from "../env"
 
-export const sql = postgres('postgresql://docker:docker@localhost:5432/short-links')
+export const sql = postgres(env.DATABASE_URL_POSTGRESQL)

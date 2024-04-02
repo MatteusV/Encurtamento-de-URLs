@@ -1,7 +1,8 @@
 import {createClient} from 'redis'
+import { env } from '../env'
 
 export const redis = createClient({
-  url: 'redis://:docker@localhost:6379',
+  url: env.DATABASE_URL_REDIS,
   database: 0,
 })
 
