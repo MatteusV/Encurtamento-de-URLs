@@ -3,15 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "20"
+  },
   "scripts": {
-    "dev": "tsx watch ./src/server.ts",
-    "setup": "tsx ./src/setup.ts"
+    "dev": "tsx watch src/server.ts",
+    "start": "node build/server.js",
+    "build": "tsup src --out-dir build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.11.30",
+    "tsup": "^8.0.2",
     "tsx": "^4.7.1",
     "typescript": "^5.4.2"
   },
